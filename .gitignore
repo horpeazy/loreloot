@@ -1,0 +1,24 @@
+# Credentials
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Generated data and local state
+.data/
+chromadb/
+ltm/
+*.sqlite3
+*.sqlite3-*
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Python and editor artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+.idea/
+.vscode/
