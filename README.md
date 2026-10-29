@@ -1,10 +1,10 @@
-# UdaPlay
+# LoreLoot
 
 A video game research assistant with local retrieval, evidence evaluation, and web-search fallback. This standalone project wraps the existing Python agent in one Streamlit chat page.
 
-[Open the live demo](https://udaplay-horpeazy.streamlit.app/)
+[Open the live demo](https://loreloot.streamlit.app/)
 
-![UdaPlay answering a game question](assets/demo.png)
+![LoreLoot answering a game question](assets/demo.png)
 
 ## Run locally
 
@@ -37,12 +37,12 @@ Conversation state belongs to each Streamlit browser session. Research storage i
 
 ## Source repository
 
-The standalone source is published at [horpeazy/udaplay](https://github.com/horpeazy/udaplay).
+The standalone source is published at [horpeazy/loreloot](https://github.com/horpeazy/loreloot).
 It is separate from the original Udacity coursework repository.
 
 ```sh
-git clone https://github.com/horpeazy/udaplay.git
-cd udaplay
+git clone https://github.com/horpeazy/loreloot.git
+cd loreloot
 ```
 
 Before committing changes, inspect `git status` and verify that `.env`, Streamlit
@@ -67,13 +67,13 @@ Root-level Streamlit secrets are exposed as environment variables. Initial index
 ### Docker / Python hosting
 
 ```sh
-docker build -t udaplay .
-docker run --rm -p 8501:8501 --env-file .env -e UDAPLAY_DATA_DIR=/data -v udaplay-data:/data udaplay
+docker build -t loreloot .
+docker run --rm -p 8501:8501 --env-file .env -e UDAPLAY_DATA_DIR=/data -v loreloot-data:/data loreloot
 ```
 
 For a host with a persistent disk, set `UDAPLAY_DATA_DIR` to its mounted path. For example, a Render service with a disk mounted at `/var/data` can use `UDAPLAY_DATA_DIR=/var/data`. A persistent client writes to disk, but cannot preserve data if the host discards that disk. Do not claim that research survives deployment restarts unless persistent storage is configured.
 
-The demo is deployed on Streamlit Community Cloud at https://udaplay-horpeazy.streamlit.app/. Link that address from your portfolio when it is ready.
+The demo is deployed on Streamlit Community Cloud at https://loreloot.streamlit.app/. Link that address from your portfolio when it is ready.
 
 ## Attribution and publication rights
 
