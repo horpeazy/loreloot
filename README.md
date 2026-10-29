@@ -33,22 +33,18 @@ The agent follows the existing workflow: retrieve → evaluate → web search if
 
 Conversation state belongs to each Streamlit browser session. Research storage is filtered by a separate visitor identifier. Resetting or losing a browser session creates a new identifier, so prior visitors' research is not exposed to a new visitor. The library's default owner remains `udaplay` for notebook use.
 
-## GitHub preparation
+## Source repository
 
-This folder is separate from the original Udacity repository. No remote has been configured and nothing has been pushed.
-
-This folder is already initialized as a local Git repository on `main`. After creating your own empty GitHub repository:
+The standalone source is published at [horpeazy/udaplay](https://github.com/horpeazy/udaplay).
+It is separate from the original Udacity coursework repository.
 
 ```sh
-git add .
-git status
-# Verify that .env and local databases are not listed before committing.
-git commit -m "Prepare UdaPlay portfolio demo"
-git remote add origin YOUR_REPOSITORY_URL
-git push -u origin main
+git clone https://github.com/horpeazy/udaplay.git
+cd udaplay
 ```
 
-Do not point this project at Udacity's upstream remote. Configure your own repository URL.
+Before committing changes, inspect `git status` and verify that `.env`, Streamlit
+secrets, and generated databases are not included.
 
 ## Deployment and portfolio
 
