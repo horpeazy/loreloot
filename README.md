@@ -2,6 +2,8 @@
 
 A video game research assistant with local retrieval, evidence evaluation, and web-search fallback. This standalone project wraps the existing Python agent in one Streamlit chat page.
 
+[Open the live demo](https://udaplay-horpeazy.streamlit.app/)
+
 ![UdaPlay answering a game question](assets/demo.png)
 
 ## Run locally
@@ -71,7 +73,7 @@ docker run --rm -p 8501:8501 --env-file .env -e UDAPLAY_DATA_DIR=/data -v udapla
 
 For a host with a persistent disk, set `UDAPLAY_DATA_DIR` to its mounted path. For example, a Render service with a disk mounted at `/var/data` can use `UDAPLAY_DATA_DIR=/var/data`. A persistent client writes to disk, but cannot preserve data if the host discards that disk. Do not claim that research survives deployment restarts unless persistent storage is configured.
 
-Deployment has not been performed. Streamlit Community Cloud is the initial deployment target; its demo URL can be linked from a future portfolio.
+The demo is deployed on Streamlit Community Cloud at https://udaplay-horpeazy.streamlit.app/. Link that address from your portfolio when it is ready.
 
 ## Attribution and publication rights
 
